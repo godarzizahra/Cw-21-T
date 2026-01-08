@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import type { UserType } from "../types/type";
 
 export default function useFetch(url: string) {
 	// const [data, setData] = useState([]);
-	const [data, setData] = useState(null);
+	const [data, setData] = useState<UserType[]>([]);
 	const [error, setError] = useState(null);
 	const [isLoading, setIsLoading] = useState(false);
 	useEffect(() => {
